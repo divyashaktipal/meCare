@@ -1,27 +1,35 @@
+import { MedicineIcon, NeurologyIcon, OrthopedicIcon, UrologyIcon, DermatologyIcon, NutritionIcon, DentalIcon, CardiologyIcon, OncologyIcon, PsychiatryIcon, RheumatologyIcon } from "@/custom/svgIcons/specialties";
+
 export function Specialties() {
   const specialties = [
-    { name: "Medicine", active: false },
-    { name: "Neuro Medicine", active: true },
-    { name: "Orthopedic surgery", active: false },
-    { name: "Neurology", active: false },
-    { name: "Cardiology", active: false },
-    { name: "Psychiatry", active: false },
-    { name: "Oncology", active: false },
-    { name: "Oncology", active: false },
-    { name: "Oncology", active: false },
+    { name: "Neuro Medicine", icon: MedicineIcon },
+    { name: "Orthopedic surgery", icon: OrthopedicIcon },
+    { name: "Neurology", icon: NeurologyIcon },
+    { name: "Cardiology", icon: CardiologyIcon },
+    { name: "Psychiatry", icon: PsychiatryIcon },
+    { name: "Oncology", icon: OncologyIcon },
+    { name: "Urology", icon: UrologyIcon },
+    { name: "Rheumatology", icon: RheumatologyIcon },
+    { name: "Dermatology", icon: DermatologyIcon },
+    { name: "Nutrition", icon: NutritionIcon },
+    { name: "Dental", icon: DentalIcon },
   ];
 
   return (
-    <section className="py-8 mt-16 md:mt-24 border-y border-border overflow-hidden bg-surface">
-      <div className="flex gap-4 md:gap-8 justify-center flex-wrap px-4 container mx-auto">
-        {specialties.map((item, index) => (
-          <div key={index} className={`flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer transition-colors ${item.active ? 'bg-secondary/30 text-foreground' : 'text-muted hover:text-foreground hover:bg-muted/10'}`}>
-            <div className={`w-6 h-6 rounded-full flex items-center justify-center ${item.active ? 'bg-secondary/50' : 'bg-muted/20'}`}>
-              <span className="text-[10px] opacity-70">O+</span>
+    <section className="py-8 mt-16 md:mt-24">
+      <div className="flex gap-4 justify-center flex-wrap">
+        {specialties.map((item, index) => {
+          const Icon = item.icon;
+
+          return (
+            <div key={index} className="flex items-center gap-2 px-4 py-2 border rounded-sm">
+              <div className="w-6 h-6 flex items-center justify-center">
+                <Icon />
+              </div>
+              <span>{item.name}</span>
             </div>
-            <span className="text-sm font-semibold whitespace-nowrap">{item.name}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
