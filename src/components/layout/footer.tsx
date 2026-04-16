@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary">
-                Me<span className="text-foreground">Care</span>
+                <span className="text-foreground">MeCare</span>
               </div>
             </Link>
             <p className="text-sm text-foreground/80 leading-relaxed max-w-xs">
@@ -16,13 +16,13 @@ export function Footer() {
             </p>
             <div className="space-y-2 mt-6 text-sm text-foreground/80">
               <div className="flex items-center gap-2">
-                <span className="text-primary font-bold">A:</span> 123 Health Ave, NY 10001
+                <span className="text-primary font-bold">A:</span> Pratap Nagar, Udaipur 313001
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-primary font-bold">P:</span> +1 (800) 123-4567
+                <span className="text-primary font-bold">P:</span> +91 987654321
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-primary font-bold">E:</span> info@mecare.example.com
+                <span className="text-primary font-bold">E:</span> divyashaktipal@gmail.com
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ export function Footer() {
               <li><Link href="about" className="hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
-              <li><Link href="blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link href="blogs" className="hover:text-primary transition-colors">Blogs</Link></li>
             </ul>
           </div>
           <div>
@@ -41,8 +41,8 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-foreground/80 font-medium">
               <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Services</Link></li>
-              <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
-              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              {/* <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li> */}
+              {/* <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li> */}
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
             </ul>
           </div>
@@ -53,14 +53,14 @@ export function Footer() {
             </ul>
             <div className="flex flex-col gap-3">
               <button className="bg-foreground text-surface px-4 py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-foreground/80 transition-colors">
-                <div className="w-6 h-6 rounded bg-surface/20"></div>
+                <div className="w-6 h-6 rounded"><img src="./googlePlayIcon.png" alt="Google Play" /></div>
                 <div className="text-left">
                   <div className="text-[10px] leading-tight text-surface/70">GET IT ON</div>
                   <div className="font-bold text-sm leading-tight">Google Play</div>
                 </div>
               </button>
               <button className="bg-foreground text-surface px-4 py-2 rounded-xl flex items-center justify-center gap-2 hover:bg-foreground/80 transition-colors">
-                <div className="w-6 h-6 rounded bg-surface/20"></div>
+                <div className="w-6 h-6 rounded"><img src="./applePlaystoreIcon.png" alt="App Store" /></div>
                 <div className="text-left">
                   <div className="text-[10px] leading-tight text-surface/70">Download on the</div>
                   <div className="font-bold text-sm leading-tight">App Store</div>

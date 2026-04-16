@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Insights() {
   const blogs = [
     { title: "The Standardization Of Healthcare Measurements", spec: "Neurologist", author: "Dr. Hassan", docImg: "./myPhoto.jpg", mainImg: "./myPhoto.jpg" },
@@ -38,9 +40,11 @@ export function Insights() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <button className="bg-primary/10 text-primary hover:bg-primary/20 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">
-            View All
-          </button>
+          <Link href="/blogs">
+            <button className="bg-primary/10 text-primary hover:bg-primary/20 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     </section>

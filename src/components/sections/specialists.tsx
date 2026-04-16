@@ -34,15 +34,7 @@ export function Specialists({ customTitle, hideDescription }: { customTitle?: Re
         <div className="text-center mb-16 max-w-4xl mx-auto">
           {customTitle ? customTitle : (
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight flex flex-wrap justify-center items-center gap-y-4">
-              Designed for
-              <span className="inline-flex items-center -space-x-3 mx-3 align-middle mt-1">
-                <img src="./myPhoto.jpg" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white relative z-[50] object-cover bg-muted" alt="Doctor 1" />
-                <img src="./myPhoto.jpg" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white relative z-[40] object-cover bg-muted" alt="Doctor 2" />
-                <img src="./myPhoto.jpg" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white relative z-[30] object-cover bg-muted" alt="Doctor 3" />
-                <img src="./myPhoto.jpg" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white relative z-[20] object-cover bg-muted" alt="Doctor 4" />
-                <img src="./myPhoto.jpg" className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white relative z-[10] object-cover bg-muted" alt="Doctor 5" />
-              </span>
-              specialists <br className="hidden md:block" /> leading healthcare excellence.
+              Designed for specialists leading healthcare excellence.
             </h2>
           )}
           {!hideDescription && (

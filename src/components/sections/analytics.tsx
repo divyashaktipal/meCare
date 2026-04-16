@@ -21,24 +21,27 @@ export function Analytics() {
 
           {/* Card 2: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
-            <img src="./myPhoto.jpg" alt="Doctor patient" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="./illustration1.png" alt="Doctor patient" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Card 3: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
-            <img src="./myPhoto.jpg" alt="Stethoscope" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="./illustration2.png" alt="Stethoscope" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
           {/* Card 4: Action Card */}
           <div className="rounded-3xl bg-[#0070bc] text-white p-8 flex flex-col justify-between relative overflow-hidden">
             <div className="z-10">
-              <div className="bg-white/20 p-2 rounded-xl w-fit mb-4">
-                <div className="w-6 h-6 border-2 border-white/50 rounded-full"></div>
-              </div>
-              <h3 className="text-xl font-bold mb-2">A Unified platform</h3>
-              <p className="text-sm text-white/80 line-clamp-2 mb-6">Gain better insights and predictions safely.</p>
+
+              <h3 className="text-xl font-bold mb-5 text-white">Cost Optimization</h3>
+              <p className="text-sm text-white/80 line-clamp-2 mb-5">This service focuses on using analytics to improve the quality of care and identify areas for reduction. It appeals to healthcare provider seeking.</p>
             </div>
-            <Button className="rounded-full w-fit bg-white text-[#0070bc] hover:bg-white/90 font-semibold z-10" size="sm">Try Now</Button>
+            <Button className="rounded-full w-fit  text-black font-semibold z-10" size="sm">Try Now
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.95117 5.01791L15.0003 5L14.9833 13.0501" stroke="#0D1525" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M14.9997 5L5 14.9987" stroke="#0D1525" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Button>
 
             {/* Decorative */}
             <div className="absolute right-0 bottom-0 w-32 h-32 bg-white/10 rounded-tl-[100px]"></div>
@@ -46,7 +49,7 @@ export function Analytics() {
 
           {/* Card 5: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
-            <img src="./myPhoto.jpg" alt="Patient hands" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="./illustration3.png" alt="Patient hands" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
         </div>
       </div>

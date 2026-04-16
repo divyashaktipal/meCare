@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6 relative">
         <Link href="/" className="flex items-center gap-2 z-[60]">
           <div className="flex items-center gap-2 text-2xl md:text-2xl font-bold tracking-tight text-primary">
-            Me<span className="text-foreground">Care</span>
+            <span className="text-foreground">MeCare</span>
           </div>
         </Link>
 
@@ -31,7 +31,7 @@ export function Navbar() {
           <Link href="/doctors" className="text-sm font-semibold text-muted hover:text-primary transition-colors">Doctors</Link>
           <Link href="/pricing" className="text-sm font-semibold text-muted hover:text-primary transition-colors">Pricing</Link>
           <Link href="/about" className="text-sm font-semibold text-muted hover:text-primary transition-colors">About</Link>
-          <Link href="/news" className="text-sm font-semibold text-muted hover:text-primary transition-colors">News</Link>
+          <Link href="/blogs" className="text-sm font-semibold text-muted hover:text-primary transition-colors">Blogs</Link>
         </nav>
 
         {/* Right Actions */}
@@ -54,9 +54,9 @@ export function Navbar() {
 
           {/* Get Appointment (Always visible, even on mobile) */}
           <Link href="/get-appointment">
-            {/* <Button variant="primary" className="hidden sm:flex rounded-full px-6 font-semibold shadow-md h-10">
+            <Button variant="primary" className="hidden sm:flex rounded-full px-6 font-semibold shadow-md h-10">
               Get Appointment
-            </Button> */}
+            </Button>
             {/* Mobile version potentially smaller */}
             <Button variant="primary" className="sm:hidden rounded-full px-4 text-xs font-bold shadow-sm h-8 bg-primary text-white">
               Get Appointment
