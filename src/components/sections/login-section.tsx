@@ -1,6 +1,41 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import axiosInstance from "@/api/axiosInstance";
 
 export function LoginSection() {
+   const [res, setRes] = useState("");
+   const [loading, setLoading] = useState(false);
+
+   const [formData, setFormData] = useState({
+      email: "",
+      password: "",
+   });
+
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData({
+         ...formData,
+         [e.target.name]: e.target.value,
+      });
+   };
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setLoading(true);
+
+      try {
+         const response = await axiosInstance.post("/auth/login", formData);
+         const data = response.data;
+         localStorage.setItem("token", data.token);
+         setRes("Login successful");
+         console.log(data);
+      } catch (error: any) {
+         setRes(error.response?.data?.message || "Login failed");
+      } finally {
+         setLoading(false);
+      }
+   };
+
    return (
       <section className="py-12 md:py-20 bg-[#FAFAFB] min-h-[calc(100vh-80px)] flex items-center">
          <div className="container mx-auto px-4 md:px-6">
@@ -19,13 +54,16 @@ export function LoginSection() {
                      Sign in to manage your health and stay connected.
                   </p>
 
-                  <form className="w-full max-w-[360px]">
+                  <form onSubmit={handleSubmit} className="w-full max-w-[360px]">
                      <div className="space-y-5 mb-3">
                         {/* Email Input */}
                         <div className="space-y-2">
                            <label className="block text-[13px] font-bold text-[#4B5563]">Email</label>
                            <input
                               type="email"
+                              name="email"
+                              value={formData.email}
+                              onChange={handleChange}
                               className="w-full h-12 px-4 rounded-xl border border-gray-200 outline-none focus:border-[#5ACDCA] text-sm font-semibold text-[#03112E] placeholder-gray-400 transition-colors"
                               placeholder="hipixem@gmail.com"
                            />
@@ -36,6 +74,9 @@ export function LoginSection() {
                            <label className="block text-[13px] font-bold text-[#4B5563]">Password</label>
                            <input
                               type="password"
+                              name="password"
+                              value={formData.password}
+                              onChange={handleChange}
                               className="w-full h-12 px-4 rounded-xl border border-gray-200 outline-none focus:border-[#5ACDCA] text-sm font-semibold text-[#03112E] placeholder-gray-400 transition-colors"
                               placeholder="password"
                            />
@@ -47,9 +88,14 @@ export function LoginSection() {
                         </div>
                      </div>
 
+                     {res && (
+                        <p className="text-center text-sm text-red-500 mt-2">
+                           {res}
+                        </p>
+                     )}
                      {/* Sign In Button */}
-                     <button type="button" className="w-full h-12 rounded-full bg-[#03112E] hover:bg-[#0a1f4a] text-white font-bold text-[15px] mb-8 mt-5 transition-colors shadow-md">
-                        Sign in
+                     <button type="submit" className="w-full h-12 rounded-full bg-[#03112E] hover:bg-[#0a1f4a] text-white font-bold text-[15px] mb-8 mt-5 transition-colors shadow-md">
+                        {loading ? "Loading..." : "Sign in"}
                      </button>
 
                      {/* Divider */}
