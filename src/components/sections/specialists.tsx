@@ -1,20 +1,35 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
+import { ReactNode, useRef, useState, useEffect } from "react";
+
+interface Doctor {
+  _id: string;
+  name: string;
+  specialization: string;
+  bgColor: string;
+  image: string;
+}
 
 export function Specialists({ customTitle, hideDescription }: { customTitle?: ReactNode, hideDescription?: boolean }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const doctors = [
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#719F9F" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#B4818D" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#A7977A" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#7AA1BE" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#719F9F" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#B4818D" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#A7977A" },
-    { name: "Hassan Qureshi", spec: "Cardiologist", hex: "#7AA1BE" }
-  ];
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/doctors");
+        const data = await response.json();
+        setDoctors(data);
+      } catch (error) {
+        console.error("Error fetching doctors:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDoctors();
+  }, []);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -47,25 +62,37 @@ export function Specialists({ customTitle, hideDescription }: { customTitle?: Re
         <div className="max-w-6xl mx-auto relative">
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth w-full pb-4"
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth w-full pb-4 min-h-[300px]"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             <style dangerouslySetInnerHTML={{ __html: `::-webkit-scrollbar { display: none; }` }} />
 
-            {doctors.map((doc, i) => (
-              <div key={i} className={`flex-shrink-0 snap-start w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] rounded-[2rem] overflow-hidden relative aspect-[3/4] group border border-border/50`}>
+            {loading ? (
+              <div className="flex gap-6 w-full">
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] rounded-[2rem] aspect-[3/4] border border-border/50 relative overflow-hidden bg-white">
+                    <div className="absolute inset-0 shimmer-bg opacity-60"></div>
+                    <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-3 relative z-10">
+                      <div className="h-6 shimmer-bg rounded-md w-3/4 shadow-sm"></div>
+                      <div className="h-4 shimmer-bg rounded-md w-1/2 shadow-sm"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : doctors.map((doc) => (
+              <div key={doc._id} className={`flex-shrink-0 snap-start w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] rounded-[2rem] overflow-hidden relative aspect-[3/4] group border border-border/50`}>
                 <div className="absolute inset-0 bg-[#E8EAEF] -z-10"></div>
-                <img src="./myPhoto.jpg" alt={doc.name} className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" />
+                <img src={doc.image || "./myPhoto.jpg"} alt={doc.name} className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" />
 
                 <div
                   className="absolute inset-x-0 bottom-0 h-[60%] opacity-90 transition-opacity duration-500"
-                  style={{ background: `linear-gradient(to top, ${doc.hex} 0%, transparent 100%)` }}
+                  style={{ background: `linear-gradient(to top, ${doc.bgColor} 0%, transparent 100%)` }}
                 ></div>
 
                 <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                   <div>
                     <h3 className="text-white font-bold text-xl drop-shadow-sm">{doc.name}</h3>
-                    <p className="text-white/90 text-sm font-medium mt-1">{doc.spec}</p>
+                    <p className="text-white/90 text-sm font-medium mt-1">{doc.specialization}</p>
                   </div>
                 </div>
               </div>

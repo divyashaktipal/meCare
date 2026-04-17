@@ -7,7 +7,7 @@ export function DoctorsHero() {
         </h1>
 
         <p className="text-[#4B5563] mt-6 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-12 font-medium">
-          Discover a platform designed for trailblazing specialists. Our resources empower leaders in <br className="hidden md:block" /> healthcare innovation and excellence.
+          Discover a platform designed for trailblazing specialists. Our resources empower leaders in healthcare innovation and excellence.
         </p>
 
         <div className="relative aspect-[16/7] md:aspect-[21/9] rounded-4xl overflow-hidden max-w-5xl mx-auto border border-black/5 bg-white shadow-sm">
