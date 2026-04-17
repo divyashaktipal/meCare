@@ -33,7 +33,7 @@ export function AboutBenefits() {
                </div>
 
                <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-border">
-                  <img src="./myPhoto.jpg" alt="Doctor holding a glowing heart" className="w-full h-full object-cover" />
+                  <img src="./aboutImg4.png" alt="Doctor holding a glowing heart" className="w-full h-full object-cover" />
                </div>
 
             </div>

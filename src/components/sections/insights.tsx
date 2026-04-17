@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export function Insights() {
   const blogs = [
-    { title: "The Standardization Of Healthcare Measurements", spec: "Neurologist", author: "Dr. Hassan", docImg: "./myPhoto.jpg", mainImg: "./myPhoto.jpg" },
-    { title: "Building The Next Generation Of Hospital Care", spec: "Cardiologist", author: "Dr. Sarah", docImg: "./myPhoto.jpg", mainImg: "./myPhoto.jpg" },
-    { title: "Exploring Mental Health Best Practices Today", spec: "Psychiatrist", author: "Dr. Emily", docImg: "./myPhoto.jpg", mainImg: "./myPhoto.jpg" }
+    { title: "The Standardization Of Healthcare Measurements", spec: "Neurologist", author: "Dr. Hassan", docImg: "./heroBlog1.png", mainImg: "./heroBlog1.png" },
+    { title: "Building The Next Generation Of Hospital Care", spec: "Cardiologist", author: "Dr. Sarah", docImg: "./heroBlog2.png", mainImg: "./heroBlog2.png" },
+    { title: "Exploring Mental Health Best Practices Today", spec: "Psychiatrist", author: "Dr. Emily", docImg: "./heroBlog3.png", mainImg: "./heroBlog3.png" }
   ];
 
   return (

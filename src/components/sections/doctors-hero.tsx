@@ -10,8 +10,8 @@ export function DoctorsHero() {
           Discover a platform designed for trailblazing specialists. Our resources empower leaders in <br className="hidden md:block" /> healthcare innovation and excellence.
         </p>
 
-        <div className="relative aspect-[16/7] md:aspect-[21/9] rounded-[2rem] overflow-hidden max-w-5xl mx-auto border border-black/5 bg-white shadow-sm">
-          <img src="./myPhoto.jpg" alt="Specialist Team" className="w-full h-full object-cover object-top" />
+        <div className="relative aspect-[16/7] md:aspect-[21/9] rounded-4xl overflow-hidden max-w-5xl mx-auto border border-black/5 bg-white shadow-sm">
+          <img src="./doctorsImg1.png" alt="Specialist Team" className="w-full h-full object-cover object-top" />
         </div>
       </div>
     </section>

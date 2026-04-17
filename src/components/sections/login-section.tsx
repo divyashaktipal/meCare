@@ -124,13 +124,8 @@ export function LoginSection() {
 
                {/* Right Image Panel */}
                <div className="flex-1 rounded-[2rem] overflow-hidden relative shadow-[0_8px_40px_rgb(0,0,0,0.08)] aspect-[4/5] md:aspect-auto">
-                  {/* Doctor Background Image */}
                   <img src="./myPhoto.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Doctor Client Services" />
-
-                  {/* Gradient Overlay matching visual design (dark teal to transparent) */}
                   <div className="absolute inset-x-0 bottom-0 top-[40%] bg-gradient-to-t from-[#205e55] via-[#205e55]/80 to-transparent"></div>
-
-                  {/* Testimonial Text */}
                   <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 text-white">
                      <p className="text-[15px] md:text-base font-medium leading-[1.6] mb-6 text-white/95 text-shadow-sm">
                         Our experience with the support team was exceptional. They were responsive, friendly, and resolved our issue quickly. It's clear they genuinely care about their clients.

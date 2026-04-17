@@ -1,47 +1,34 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export function AboutHero() {
    return (
-      <section className="bg-surface pt-16 md:pt-24 pb-12">
-         <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto mb-12 leading-tight">
-               Meet our Healthcare Team: <br className="hidden md:block" />
-               Committed to Your Well-Being
-            </h1>
+      <section className="bg-[#F4F9F8] pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-8">
+         <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#0B1221] leading-[1.1] mb-6 tracking-tight max-w-4xl mx-auto">
+                  Meet our Healthcare Team: <br className="hidden md:block" />
+                  Committed to Your Well-Being
+               </h1>
+               <p className="text-[#4A5568] text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+                  Our healthcare team combines expertise, compassion, and a commitment to your <br className="hidden md:block" /> well-being, ensuring you receive personalized
+               </p>
 
-            <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden mb-16 shadow-xl border-4 border-surface/50 bg-primary/10 aspect-video md:aspect-[21/9]">
-               <div className="absolute inset-0 bg-primary/5"></div>
-               <img src="./myPhoto.jpg" alt="Healthcare Team" className="w-full h-full object-cover object-center relative z-10 mix-blend-multiply opacity-90" />
-               {/* Decorative elements */}
-               <div className="absolute bottom-4 left-4 bg-white/80 p-2 rounded-xl backdrop-blur text-xs font-bold shadow-sm z-20">We Care</div>
+               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                  <Link href="/doctors">
+                     <Button className="bg-[#5BC2A8] hover:bg-[#4BA891] text-white rounded-full px-6 py-2 h-auto text-base font-medium transition-all shadow-sm">
+                        Meet Our Consultations
+                     </Button>
+                  </Link>
+               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 md:gap-16 border-t border-b border-border/50 py-8">
-               <div className="flex items-center gap-4 text-left">
-                  <div className="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center font-bold bg-primary/5">15</div>
-                  <div>
-                     <p className="font-bold text-foreground">15 Years</p>
-                     <p className="text-xs text-muted font-medium">Experience</p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+               <div className="w-full rounded-[2rem] overflow-hidden aspect-[4/3] md:aspect-[5/4] lg:aspect-[4/3]">
+                  <img src="./aboutImg1.png" alt="Medical team" className="w-full h-full object-cover" />
                </div>
-               <div className="flex items-center gap-4 text-left">
-                  <div className="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center font-bold bg-primary/5">200</div>
-                  <div>
-                     <p className="font-bold text-foreground">200+</p>
-                     <p className="text-xs text-muted font-medium">Specialists</p>
-                  </div>
-               </div>
-               <div className="flex items-center gap-4 text-left">
-                  <div className="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center font-bold bg-primary/5">1M</div>
-                  <div>
-                     <p className="font-bold text-foreground">1M+</p>
-                     <p className="text-xs text-muted font-medium">Patients</p>
-                  </div>
-               </div>
-               <div className="flex items-center gap-4 text-left">
-                  <div className="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center font-bold bg-primary/5">24</div>
-                  <div>
-                     <p className="font-bold text-foreground">24/7</p>
-                     <p className="text-xs text-muted font-medium">Service</p>
-                  </div>
+               <div className="w-full rounded-[2rem] overflow-hidden aspect-[4/3] md:aspect-[5/4] lg:aspect-[4/3]">
+                  <img src="./aboutImg2.png" alt="Doctor examining patient" className="w-full h-full object-cover" />
                </div>
             </div>
          </div>

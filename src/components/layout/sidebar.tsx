@@ -29,13 +29,11 @@ export function Sidebar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
-                  isActive
+                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${isActive
                     ? "bg-primary/10 text-primary"
                     : "text-foreground hover:bg-muted/10 hover:text-foreground"
-                }`}
+                  }`}
               >
-                {/* Normally we'd use lucide-react here, but using simple div placeholders */}
                 <div className={`h-5 w-5 rounded-md flex items-center justify-center ${isActive ? "text-primary" : "text-muted"}`}>
                   <div className="w-3 h-3 border-2 border-current rounded-sm"></div>
                 </div>

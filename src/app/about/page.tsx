@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { AboutHero } from "@/components/sections/about-hero";
+import { AboutStats } from "@/components/sections/about-stats";
 import { AboutPassionate } from "@/components/sections/about-passionate";
 import { AboutWellBeing } from "@/components/sections/about-well-being";
 import { AboutBenefits } from "@/components/sections/about-benefits";
@@ -13,6 +14,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1 overflow-hidden">
         <AboutHero />
+        <AboutStats />
         <AboutPassionate />
         <AboutWellBeing />
         <AboutBenefits />

@@ -19,7 +19,6 @@ export function CTABanner() {
                   </div>
 
                   <div className="relative mt-8 lg:mt-0 h-[300px] hidden md:block">
-                     {/* UI Mockup Placeholder representing the booking window shown in Figma */}
                      <div className="absolute right-0 lg:right-[-50px] top-1/2 transform -translate-y-1/2 w-full max-w-sm bg-white rounded-3xl p-6 shadow-2xl rotate-[-2deg] border border-white">
                         <div className="flex items-center gap-3 mb-6 bg-surface p-2 rounded-2xl">
                            <div className="w-12 h-12 rounded-full bg-[#5ACDCA]/20 overflow-hidden">
@@ -47,7 +46,6 @@ export function CTABanner() {
                   </div>
                </div>
 
-               {/* Decorative shapes */}
                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
                <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/5 rounded-full blur-2xl transform -translate-x-1/2 translate-y-1/3 pointer-events-none"></div>
             </div>
