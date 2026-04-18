@@ -6,7 +6,7 @@ export function Hero() {
     <div className="relative pt-6 pb-12 w-full">
 
       {/* Top Hero Card */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#E6F8F3] to-[#B3E8DA] rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-8 lg:mx-16 pt-20 md:pt-32 lg:pt-40 pb-0 text-center flex flex-col items-center shadow-sm relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#265043] to-[#066a4f] rounded-xl md:rounded-xl mx-4 md:mx-8 lg:mx-16 pt-20 md:pt-32 lg:pt-40 pb-0 text-center flex flex-col items-center shadow-sm relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px]">
         <div className="max-w-6xl w-full h-full relative flex justify-center mt-auto">
 
           {/* Background Text */}

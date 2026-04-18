@@ -10,10 +10,17 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
+    setIsAuthenticated(!!localStorage.getItem("token"));
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsAuthenticated(false);
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full bg-surface border-b border-border shadow-sm sm:shadow-none">
@@ -48,9 +55,20 @@ export function Navbar() {
           )}
 
           {/* Desktop Login */}
-          <Link href="/login" className="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors text-foreground">
-            Login
-          </Link>
+          {isAuthenticated ? (
+            <>
+              <Link href="/dashboard" className="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors text-foreground">
+                Dashboard
+              </Link>
+              <button onClick={handleLogout} className="hidden md:inline-block text-sm font-semibold hover:text-red-500 transition-colors text-foreground">
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link href="/login" className="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors text-foreground">
+              Login
+            </Link>
+          )}
 
           {/* Get Appointment (Always visible, even on mobile) */}
           <Link href="/get-appointment">
@@ -98,10 +116,22 @@ export function Navbar() {
             </nav>
 
             <div className="flex flex-col gap-4 pt-5 mt-2 border-t border-border">
-              <Link href="/login" onClick={() => setIsMenuOpen(false)} className="text-base font-semibold text-foreground hover:text-primary transition-colors flex items-center justify-between group">
-                Login
-                <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-              </Link>
+              {isAuthenticated ? (
+                <>
+                  <Link href="/dashboard" onClick={() => setIsMenuOpen(false)} className="text-base font-semibold text-foreground hover:text-primary transition-colors flex items-center justify-between group">
+                    Dashboard
+                    <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </Link>
+                  <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="text-left text-base font-semibold text-foreground hover:text-red-500 transition-colors flex items-center justify-between group">
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link href="/login" onClick={() => setIsMenuOpen(false)} className="text-base font-semibold text-foreground hover:text-primary transition-colors flex items-center justify-between group">
+                  Login
+                  <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                </Link>
+              )}
             </div>
           </div>
         </>
