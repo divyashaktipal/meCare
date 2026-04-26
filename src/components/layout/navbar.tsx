@@ -1,18 +1,17 @@
 "use client";
-
-import * as React from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setMounted(true);
     setIsAuthenticated(!!localStorage.getItem("token"));
   }, []);

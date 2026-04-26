@@ -6,7 +6,7 @@ export function Hero() {
     <div className="relative pt-6 pb-12 w-full">
 
       {/* Top Hero Card */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#265043] to-[#066a4f] rounded-xl md:rounded-xl mx-4 md:mx-8 lg:mx-16 pt-20 md:pt-32 lg:pt-40 pb-0 text-center flex flex-col items-center shadow-sm relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#265043] to-[#066a4f] rounded-xl md:rounded-xl mx-4 md:mx-8 lg:mx-16 pt-2 md:pt-8 lg:pt-10 pb-0 text-center flex flex-col items-center shadow-sm relative min-h-[450px] md:min-h-[550px] lg:min-h-[100px]">
         <div className="max-w-6xl w-full h-full relative flex justify-center mt-auto">
 
           {/* Background Text */}
@@ -71,8 +71,8 @@ export function Hero() {
       <div className="relative z-20 mx-4 md:mx-8 lg:mx-16 mt-6 md:mt-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 w-full">
           {/* Card 1 */}
-          <div className="bg-[#FDECEE] rounded-[2rem] p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[280px]">
-            <div className="flex justify-between items-start mb-6">
+          <div className="bg-[#ffd2d7] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
+            <div className="flex justify-between items-start mb-4">
               <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">Qualified Doctors</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0">
                 <span className="w-5 h-5 inline-block">
@@ -90,9 +90,9 @@ export function Hero() {
             <p className="text-[15px] text-[#4B5563] font-medium leading-relaxed pr-4">
               Schedule your appointment with your health consultation with the best doctors in medicare
             </p>
-            <div className="mt-auto">
+            <div className="mt-6">
               <Link href={"/get-appointment"}>
-                <Button className="rounded-full bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-6 font-semibold w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                <Button className="rounded-xl bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-2 font-semibold w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
                   Scheduling an Appointment &rarr;
                 </Button>
               </Link>
@@ -100,7 +100,7 @@ export function Hero() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#E6F4F1] rounded-[2rem] p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[280px]">
+          <div className="bg-[#E6F4F1] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
             <div className="flex justify-between items-start mb-6">
               <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">Consultation</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0 text-[#5ACDCA]">
@@ -128,7 +128,7 @@ export function Hero() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#FFF8DF] rounded-[2rem] p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[280px]">
+          <div className="bg-[#FFF8DF] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
             <div className="flex justify-between items-start mb-6">
               <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">24/7 Support</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0">
