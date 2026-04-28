@@ -10,7 +10,6 @@ export function Analytics() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-[250px]">
-          {/* Card 1: Wide Card */}
           <div className="lg:col-span-2 rounded-3xl bg-[#4bc9c1]/20 p-8 flex flex-col justify-between overflow-hidden relative">
             <div className="z-10 w-2/3">
               <h3 className="text-2xl font-bold mb-3 text-foreground">Empowering Health professionals</h3>
@@ -19,17 +18,14 @@ export function Analytics() {
             </div>
           </div>
 
-          {/* Card 2: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
             <img src="./illustration1.png" alt="Doctor patient" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
-          {/* Card 3: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
             <img src="./illustration2.png" alt="Stethoscope" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
 
-          {/* Card 4: Action Card */}
           <div className="rounded-3xl bg-[#0070bc] text-white p-8 flex flex-col justify-between relative overflow-hidden">
             <div className="z-10">
 
@@ -43,11 +39,9 @@ export function Analytics() {
               </svg>
             </Button>
 
-            {/* Decorative */}
             <div className="absolute right-0 bottom-0 w-32 h-32 bg-white/10 rounded-tl-[100px]"></div>
           </div>
 
-          {/* Card 5: Square Card Image */}
           <div className="rounded-3xl overflow-hidden relative group">
             <img src="./illustration3.png" alt="Patient hands" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>

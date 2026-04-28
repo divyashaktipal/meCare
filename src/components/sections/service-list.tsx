@@ -1,11 +1,14 @@
+"use client"
+import Link from "next/link";
+
 export function ServiceList() {
   const services = [
-    { title: "Cardiology", desc: "Our cardiology services at Medcare offer advanced technology to diagnose, treat, and prevent heart diseases." },
-    { title: "Endocrinology", desc: "Our comprehensive medical services for the diagnosis and treatment of conditions associated with hormones." },
-    { title: "Neurology", desc: "Our highly specialized medical team, using advanced technology, testing, and modern treatment approaches." },
-    { title: "Eye care", desc: "Our comprehensive care with personalized treatments combining medical, surgical, to keep healthy vision." },
-    { title: "Dentist", desc: "A comprehensive overall health. Offering everything from shining a true, healthy smile always healthy and bright." },
-    { title: "Orthopedics", desc: "Dedicated professionals treats bone, joint, and muscle issues. Arthritis and injury or severe mobility, we conquer pain." }
+    { title: "Cardiology", desc: "Our cardiology services at Medcare offer advanced technology to diagnose, treat, and prevent heart diseases.", url: "services/cardiology" },
+    { title: "Endocrinology", desc: "Our comprehensive medical services for the diagnosis and treatment of conditions associated with hormones.", url: "services/endocrinology" },
+    { title: "Neurology", desc: "Our highly specialized medical team, using advanced technology, testing, and modern treatment approaches.", url: "services/neurology" },
+    { title: "Eye care", desc: "Our comprehensive care with personalized treatments combining medical, surgical, to keep healthy vision.", url: "services/eye-care" },
+    { title: "Dentist", desc: "A comprehensive overall health. Offering everything from shining a true, healthy smile always healthy and bright.", url: "services/dentist" },
+    { title: "Orthopedics", desc: "Dedicated professionals treats bone, joint, and muscle issues. Arthritis and injury or severe mobility, we conquer pain.", url: "services/orthopedics" }
   ];
 
   return (
@@ -32,14 +35,15 @@ export function ServiceList() {
               <p className="text-sm text-foreground/70 leading-relaxed font-medium mb-8 flex-1">
                 {service.desc}
               </p>
-
-              <button className="flex items-center gap-2 text-xs font-bold text-foreground group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border border-border rounded-full px-4 py-2 hover:bg-muted/10">
-                Read more <span className="text-lg leading-none mb-0.5">↗</span>
-              </button>
+              <Link href={service.url}>
+                <button className="flex items-center gap-2 text-xs font-bold text-foreground group-hover:text-primary transition-colors uppercase tracking-widest mt-auto border border-border rounded-full px-4 py-2 hover:bg-muted/10">
+                  Read more <span className="text-lg leading-none mb-0.5">↗</span>
+                </button>
+              </Link>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }

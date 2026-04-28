@@ -9,8 +9,6 @@ export function Packages() {
     { name: "General Health Check-up", price: "$100", status: "Active", bg: "bg-[#F4FAF8]" },
     { name: "Premium Health Check-up", price: "$250", status: "Active", bg: "bg-[#F4FAF8]" },
   ];
-
-  // Store quantities keyed by index
   const [cart, setCart] = useState<Record<number, number>>({});
 
   const handleAdd = (index: number) => {
@@ -75,8 +73,6 @@ export function Packages() {
 
               <div className="flex items-center justify-between mt-auto pt-4">
                 <p className="text-2xl font-extrabold text-[#03112E]">{pkg.price}</p>
-
-                {/* Dynamic Add / Increment Controller */}
                 {!cart[i] ? (
                   <Button
                     onClick={() => handleAdd(i)}
