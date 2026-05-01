@@ -2,13 +2,13 @@ import { Button } from "@/components/ui/button";
 
 export function Solutions() {
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 max-w-3xl mx-auto leading-tight">
             Revolutionize with Cutting-Edge<br />Healthcare Solutions
           </h2>
-          <p className="text-muted max-w-2xl mx-auto">Providing advanced healthcare tools and platforms to streamline operations and enhance patient care.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto">Providing advanced healthcare tools and platforms to streamline operations and enhance patient care.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto auto-rows-[220px]">
           {/* Card 1 */}
@@ -48,11 +48,11 @@ export function Solutions() {
               Innovative Tools Transforming Healthcare Efficiency and Care.
             </div>
             <span className="flex items-center justify-between mt-12">
-              <h3 className="text-xl font-bold text-foreground">
+              <h3 className="text-2xl font-semibold text-black">
                 Electronic<br /> Health Record
               </h3>
               <span className="w-10 h-10 flex items-center justify-center rounded-full 
-                     bg-white/30 backdrop-blur-md border border-white/40 
+                     bg-white/20 backdrop-blur-md border border-white/40 
                      shadow-md">
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
                   <path d="M6.44922 4.65332L13.912 4.63672L13.8962 12.1004" stroke="#0f172a" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
@@ -92,10 +92,10 @@ export function Solutions() {
             {/* Title + Icon in one line */}
             <div className="flex items-center justify-between mt-12">
               <div>
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-xl font-bold text-black">
                   In-Person Consult
                 </h3>
-                <div className="text-sm font-medium text-muted">
+                <div className="text-sm font-medium text-black">
                   Total health overviews
                 </div>
               </div>

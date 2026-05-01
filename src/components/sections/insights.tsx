@@ -1,6 +1,8 @@
+"use client"
 import Link from "next/link";
-
+import { useState } from "react";
 export function Insights() {
+  const [isDarkBackground, setIsDarkBackground] = useState(false);
   const blogs = [
     { title: "The Standardization Of Healthcare Measurements", spec: "Neurologist", author: "Dr. Hassan", docImg: "./heroBlog1.png", mainImg: "./heroBlog1.png" },
     { title: "Building The Next Generation Of Hospital Care", spec: "Cardiologist", author: "Dr. Sarah", docImg: "./heroBlog2.png", mainImg: "./heroBlog2.png" },
@@ -8,11 +10,11 @@ export function Insights() {
   ];
 
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-background" id="insights">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Updates & Insights</h2>
-          <p className="text-muted">Stay informed with the latest updates, medical advice, and <br />healthcare developments.</p>
+          <p className="text-muted-foreground">Stay informed with the latest updates, medical advice, and <br />healthcare developments.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -20,8 +22,11 @@ export function Insights() {
             <div key={i} className="flex flex-col group cursor-pointer">
               <div className="rounded-3xl overflow-hidden mb-6 aspect-video relative shadow-sm border border-border">
                 <img src={blog.mainImg} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 flex items-center gap-2 text-xs font-semibold shadow-sm">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                <div
+                  className={`absolute top-4 left-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 flex items-center gap-2 text-xs font-semibold shadow-sm 
+                            ${isDarkBackground ? "text-gray-900" : "text-gray-700"}`}
+                >
+                  <div className="w-2 h-2 rounded-full bg-black"></div>
                   Article
                 </div>
               </div>
@@ -32,7 +37,7 @@ export function Insights() {
                 <img src={blog.docImg} alt={blog.author} className="w-10 h-10 rounded-full object-cover border border-border" />
                 <div>
                   <p className="text-sm font-bold text-foreground">{blog.author}</p>
-                  <p className="text-xs text-muted">{blog.spec}</p>
+                  <p className="text-xs text-muted-foreground">{blog.spec}</p>
                 </div>
               </div>
             </div>

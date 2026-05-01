@@ -26,16 +26,16 @@ export function CTABanner() {
                            </div>
                            <div>
                               <h4 className="font-bold text-sm text-foreground">Dr. Sarah Jenkins</h4>
-                              <p className="text-xs text-muted text-foreground/70">Cardiologist - Specialist</p>
+                              <p className="text-xs text-muted-foreground">Cardiologist - Specialist</p>
                            </div>
                         </div>
                         <div className="space-y-3">
                            <div className="h-10 bg-surface rounded-xl flex items-center px-4 justify-between border border-border">
-                              <span className="text-xs text-muted">Select Date</span>
-                              <span className="text-xs">24 Oct 2024</span>
+                              <span className="text-xs text-muted-foreground">Select Date</span>
+                              <span className="text-xs">24 Oct 2026</span>
                            </div>
                            <div className="h-10 bg-surface rounded-xl flex items-center px-4 justify-between border border-border">
-                              <span className="text-xs text-muted">Select Time</span>
+                              <span className="text-xs text-muted-foreground">Select Time</span>
                               <span className="text-xs">10:00 AM</span>
                            </div>
                         </div>

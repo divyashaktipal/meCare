@@ -53,7 +53,7 @@ export function Specialists({ customTitle, hideDescription }: { customTitle?: Re
             </h2>
           )}
           {!hideDescription && (
-            <p className="text-muted mt-6 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+            <p className="text-muted-foreground mt-6 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
               Discover a platform designed for trailblazing specialists. Our resources empower leaders in healthcare innovation and excellence.
             </p>
           )}

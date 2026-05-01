@@ -47,7 +47,7 @@ export function Hero() {
           {/* Bottom Right Button */}
           <div className="absolute bottom-10 lg:bottom-16 right-6 lg:right-12 hidden md:block z-20">
             <Link href={"/get-appointment"}>
-              <Button className="rounded-full bg-[#5ACDCA] text-white hover:bg-[#4bc9c1] font-bold h-12 px-8 cursor-pointer shadow-md transition-transform hover:scale-105 active:scale-95">
+              <Button className=" font-bold h-12 px-8 cursor-pointer shadow-md transition-transform hover:scale-105 active:scale-95">
                 Schedule An Appointment
               </Button>
             </Link>

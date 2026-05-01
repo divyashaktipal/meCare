@@ -16,7 +16,7 @@ export function Specialties() {
   ];
 
   return (
-    <section className="py-8">
+    <section className="py-8 bg-muted">
       <div className="flex gap-4 justify-center flex-wrap">
         {specialties.map((item, index) => {
           const Icon = item.icon;
