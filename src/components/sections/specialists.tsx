@@ -44,11 +44,11 @@ export function Specialists({ customTitle, hideDescription }: { customTitle?: Re
   };
 
   return (
-    <section className="py-20 bg-background overflow-hidden overflow-x-hidden">
+    <section className="py-20 bg-[#0b221d] overflow-hidden overflow-x-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           {customTitle ? customTitle : (
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight flex flex-wrap justify-center items-center gap-y-4">
+            <h2 className="text-3xl md:text-5xl tracking-tight mb-4 leading-tight flex flex-wrap justify-center items-center gap-y-4" style={{ fontWeight: 600 }}>
               Designed for specialists leading healthcare excellence.
             </h2>
           )}
@@ -91,8 +91,8 @@ export function Specialists({ customTitle, hideDescription }: { customTitle?: Re
 
                 <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                   <div>
-                    <h3 className="text-white font-bold text-xl drop-shadow-sm">{doc.name}</h3>
-                    <p className="text-white/90 text-sm font-medium mt-1">{doc.specialization}</p>
+                    <h3 className="text-white text-xl drop-shadow-sm" style={{ fontWeight: 400 }}>{doc.name}</h3>
+                    <p className="text-white/90 text-sm mt-1" style={{ fontWeight: 400 }}>{doc.specialization}</p>
                   </div>
                 </div>
               </div>

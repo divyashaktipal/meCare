@@ -5,7 +5,7 @@ export function Solutions() {
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-5xl tracking-tight mb-4 max-w-3xl mx-auto leading-tight" style={{ fontWeight: 600 }}>
             Revolutionize with Cutting-Edge<br />Healthcare Solutions
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Providing advanced healthcare tools and platforms to streamline operations and enhance patient care.</p>
@@ -21,8 +21,8 @@ export function Solutions() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
               <span className="flex items-center justify-between gap-4">
                 <span>
-                  <h3 className="text-white font-bold text-xl mb-1">Seamless Health care</h3>
-                  <p className="text-white/80 text-sm">
+                  <h3 className="text-white text-xl mb-1" style={{ fontWeight: 400 }}>Seamless Health care</h3>
+                  <p className="text-white/80 text-sm font-card-desc" style={{ fontWeight: 400 }}>
                     Empathetic care and expert medical advice available 24/7
                   </p>
                 </span>
@@ -44,11 +44,11 @@ export function Solutions() {
           {/* Card 2 */}
           <div className="rounded-md bg-[#d1f1eb] p-8 flex flex-col justify-between relative group">
 
-            <div className="text-md font-medium text-black mb-2 tracking-wide">
+            <div className="text-md text-black mb-2 tracking-wide" style={{ fontWeight: 400 }}>
               Innovative Tools Transforming Healthcare Efficiency and Care.
             </div>
             <span className="flex items-center justify-between mt-12">
-              <h3 className="text-2xl font-semibold text-black">
+              <h3 className="text-2xl text-black" style={{ fontWeight: 400 }}>
                 Electronic<br /> Health Record
               </h3>
               <span className="w-10 h-10 flex items-center justify-center rounded-full 
@@ -64,9 +64,9 @@ export function Solutions() {
 
           {/* Card 3: Dark Blue block (spanning 2 rows on right) */}
           <div className="md:row-span-2 rounded-md bg-[#1D3540] text-white p-8 flex flex-col justify-between relative group overflow-hidden">
-            <h3 className="text-md text-white font-medium mb-4 relative leading-relaxed">Streamlined, precise, and secure solutions for managing healthcare payments and invoices. We optimize financial operations, minimize errors, and ensure timely payments for providers and patients alike.We optimize financial operations, minimize errors, and ensure timely payment</h3>
+            <h3 className="text-md text-white mb-4 relative leading-relaxed font-card-desc" style={{ fontWeight: 400 }}>Streamlined, precise, and secure solutions for managing healthcare payments and invoices. We optimize financial operations, minimize errors, and ensure timely payments for providers and patients alike.We optimize financial operations, minimize errors, and ensure timely payment</h3>
             <span className="relative z-10 mt-auto flex items-center justify-between gap-4">
-              <span className="text-3xl font-bold leading-tight">
+              <span className="text-3xl leading-tight" style={{ fontWeight: 400 }}>
                 Billing and <br /> invoicing
               </span>
               <span className="w-10 h-10 flex items-center justify-center rounded-full 
@@ -85,17 +85,17 @@ export function Solutions() {
           {/* Card 4: Light Pink block */}
           <div className="rounded-md bg-[#FFF0F4] p-8 flex flex-col justify-between group hover:bg-[#ffe3ea] transition-colors">
 
-            <div className="text-black font-medium text-md mb-2 tracking-wide">
+            <div className="text-black text-md mb-2 tracking-wide" style={{ fontWeight: 400 }}>
               Streamlined Solutions for Virtual Consultations and Management.
             </div>
 
             {/* Title + Icon in one line */}
             <div className="flex items-center justify-between mt-12">
               <div>
-                <h3 className="text-xl font-bold text-black">
+                <h3 className="text-xl text-black" style={{ fontWeight: 400 }}>
                   In-Person Consult
                 </h3>
-                <div className="text-sm font-medium text-black">
+                <div className="text-sm text-black" style={{ fontWeight: 400 }}>
                   Total health overviews
                 </div>
               </div>

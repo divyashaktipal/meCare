@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 
 export function CTABanner() {
    return (
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[#17191a]">
          <div className="container mx-auto px-4 md:px-6">
             <div className="bg-[#5ACDCA] rounded-[3rem] p-12 md:p-16 relative overflow-hidden max-w-6xl mx-auto shadow-2xl">
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
                   <div className="text-white space-y-8 max-w-lg">
-                     <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tight drop-shadow-sm">
+                     <h2 className="text-4xl md:text-5xl leading-tight tracking-tight drop-shadow-sm" style={{ fontWeight: 600 }}>
                         Schedule Your Appointment with us
                      </h2>
                      <p className="text-white/90 text-lg">
@@ -25,7 +25,7 @@ export function CTABanner() {
                               <img src="./myPhoto.jpg" alt="Doctor" className="w-full h-full object-cover" />
                            </div>
                            <div>
-                              <h4 className="font-bold text-sm text-foreground">Dr. Sarah Jenkins</h4>
+                              <h4 className="text-sm text-foreground" style={{ fontWeight: 400 }}>Dr. Sarah Jenkins</h4>
                               <p className="text-xs text-muted-foreground">Cardiologist - Specialist</p>
                            </div>
                         </div>

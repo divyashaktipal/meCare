@@ -51,10 +51,15 @@
   --sidebar-border: oklch(0.92 0 0);
   --sidebar-ring: oklch(0 0 0);
 
-  /* Fonts (FROM REFERENCE) */
+  /* Fonts */
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: JetBrains Mono, monospace;
+
+  /* Custom font roles */
+  --font-heading: var(--font-red-hat-text, 'Red Hat Text', sans-serif);
+  --font-subheading: var(--font-onest, 'Onest', sans-serif);
+  --font-card-desc: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
   /* Radius + spacing */
   --radius: 0.5rem;
@@ -126,6 +131,9 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+  --font-subheading: var(--font-subheading);
+  --font-card-desc: var(--font-card-desc);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -146,6 +154,24 @@
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
   }
+
+  /* ── Heading font: Red Hat Text ── */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  /* ── Subheading / masked text font: Onest ── */
+  .font-subheading,
+  [class*="text-muted-foreground"],
+  .subheading {
+    font-family: var(--font-subheading);
+  }
+
+}
+
+/* ── Card description font: Helvetica (outside @layer for higher specificity) ── */
+.font-card-desc {
+  font-family: var(--font-card-desc) !important;
 }
 
 .shimmer-bg {

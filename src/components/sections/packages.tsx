@@ -32,7 +32,7 @@ export function Packages() {
   };
 
   return (
-    <section className="py-20 bg-muted/80" id="packages">
+    <section className="py-20 bg-[#09181e] text-[#dcdbd8]" id="packages">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Exclusive Health Check-up<br />Packages</h2>

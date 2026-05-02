@@ -10,7 +10,7 @@ export function Hero() {
         <div className="max-w-6xl w-full h-full relative flex justify-center mt-auto">
 
           {/* Background Text */}
-          <h1 className="text-5xl md:text-[80px] lg:text-[110px] font-extrabold tracking-tighter text-white/90 drop-shadow-sm absolute top-[10%] md:top-[12%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap">
+          <h1 className="text-5xl md:text-[80px] lg:text-[110px] tracking-tighter text-white/90 drop-shadow-sm absolute top-[10%] md:top-[12%] left-1/2 -translate-x-1/2 w-full text-center z-0 whitespace-nowrap" style={{ fontWeight: 600 }}>
             Excellence Healthcare
           </h1>
 
@@ -39,7 +39,7 @@ export function Hero() {
 
           {/* Bottom Left Text */}
           <div className="absolute bottom-10 lg:bottom-16 left-6 lg:left-12 max-w-[280px] text-left hidden md:block z-20">
-            <p className="text-[#03112E] font-medium text-[15px] leading-relaxed">
+            <p className="text-[#03112E] text-[15px] leading-relaxed" style={{ fontWeight: 400 }}>
               Prioritizing your well-being with top-tier medical expertise and compassionate care tailored to your needs
             </p>
           </div>
@@ -47,7 +47,7 @@ export function Hero() {
           {/* Bottom Right Button */}
           <div className="absolute bottom-10 lg:bottom-16 right-6 lg:right-12 hidden md:block z-20">
             <Link href={"/get-appointment"}>
-              <Button className=" font-bold h-12 px-8 cursor-pointer shadow-md transition-transform hover:scale-105 active:scale-95">
+              <Button className=" h-12 px-8 cursor-pointer shadow-md transition-transform hover:scale-105 active:scale-95" style={{ fontWeight: 400 }}>
                 Schedule An Appointment
               </Button>
             </Link>
@@ -55,11 +55,11 @@ export function Hero() {
 
           {/* Mobile Text & Button (Shown only below md) */}
           <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-4 md:hidden z-20">
-            <p className="text-[#03112E] font-medium text-sm text-center bg-white/40 backdrop-blur p-2 rounded-xl">
+            <p className="text-[#03112E] text-sm text-center bg-white/40 backdrop-blur p-2 rounded-xl" style={{ fontWeight: 400 }}>
               Prioritizing your well-being with top-tier medical expertise and compassionate care
             </p>
             <Link href={"/get-appointment"}>
-              <Button className="rounded-full bg-[#5ACDCA] text-white hover:bg-[#4bc9c1] font-bold h-10 shadow-md">
+              <Button className="rounded-full bg-[#5ACDCA] text-white hover:bg-[#4bc9c1] h-10 shadow-md" style={{ fontWeight: 400 }}>
                 Schedule An Appointment
               </Button>
             </Link>
@@ -73,7 +73,7 @@ export function Hero() {
           {/* Card 1 */}
           <div className="bg-[#ffd2d7] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">Qualified Doctors</h3>
+              <h3 className="text-xl lg:text-2xl text-[#03112E]" style={{ fontWeight: 400 }}>Qualified Doctors</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0">
                 <span className="w-5 h-5 inline-block">
                   <svg
@@ -87,12 +87,12 @@ export function Hero() {
                 </span>
               </div>
             </div>
-            <p className="text-[15px] text-[#4B5563] font-medium leading-relaxed pr-4">
+            <p className="text-[15px] text-[#4B5563] leading-relaxed pr-4 font-card-desc" style={{ fontWeight: 400 }}>
               Schedule your appointment with your health consultation with the best doctors in medicare
             </p>
             <div className="mt-6">
               <Link href={"/get-appointment"}>
-                <Button className="rounded-xl bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-2 font-semibold w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                <Button className="rounded-xl bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-2 w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" style={{ fontWeight: 400 }}>
                   Scheduling an Appointment &rarr;
                 </Button>
               </Link>
@@ -102,7 +102,7 @@ export function Hero() {
           {/* Card 2 */}
           <div className="bg-[#E6F4F1] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
             <div className="flex justify-between items-start mb-6">
-              <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">Consultation</h3>
+              <h3 className="text-xl lg:text-2xl text-[#03112E]" style={{ fontWeight: 400 }}>Consultation</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0 text-[#5ACDCA]">
                 <span className="w-5 h-5 inline-block">
                   <svg
@@ -115,12 +115,12 @@ export function Hero() {
                 </span>
               </div>
             </div>
-            <p className="text-[15px] text-[#4B5563] font-medium leading-relaxed pr-4">
+            <p className="text-[15px] text-[#4B5563] leading-relaxed pr-4" style={{ fontWeight: 400 }}>
               Schedule your appointment with your health consultation with the best doctors in medicare
             </p>
             <div className="mt-auto">
               <Link href={"/get-appointment"}>
-                <Button className="rounded-full bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-6 font-semibold w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                <Button className="rounded-full bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-6 w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" style={{ fontWeight: 400 }}>
                   Scheduling an Appointment &rarr;
                 </Button>
               </Link>
@@ -130,7 +130,7 @@ export function Hero() {
           {/* Card 3 */}
           <div className="bg-[#FFF8DF] rounded-xl p-6 shadow-sm border border-transparent hover:border-gray-100 flex flex-col h-[230px]">
             <div className="flex justify-between items-start mb-6">
-              <h3 className="text-xl lg:text-2xl font-bold text-[#03112E]">24/7 Support</h3>
+              <h3 className="text-xl lg:text-2xl text-[#03112E]" style={{ fontWeight: 400 }}>24/7 Support</h3>
               <div className="w-[46px] h-[46px] bg-white rounded-full flex items-center justify-center shadow-sm shrink-0">
 
 
@@ -146,12 +146,12 @@ export function Hero() {
                 </span>
               </div>
             </div>
-            <p className="text-[15px] text-[#4B5563] font-medium leading-relaxed pr-4">
+            <p className="text-[15px] text-[#4B5563] leading-relaxed pr-4" style={{ fontWeight: 400 }}>
               Schedule your appointment with your health consultation with the best doctors in medicare
             </p>
             <div className="mt-auto">
               <Link href={"/get-appointment"}>
-                <Button className="rounded-full bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-6 font-semibold w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95">
+                <Button className="rounded-full bg-[#03112E] text-white hover:bg-[#03112E]/90 h-11 px-6 w-fit shadow-md cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95" style={{ fontWeight: 400 }}>
                   Scheduling an Appointment &rarr;
                 </Button>
               </Link>

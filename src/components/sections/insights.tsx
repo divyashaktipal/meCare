@@ -13,7 +13,7 @@ export function Insights() {
     <section className="py-20 bg-background" id="insights">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">Health Updates & Insights</h2>
+          <h2 className="text-3xl md:text-5xl tracking-tight mb-4" style={{ fontWeight: 600 }}>Health Updates & Insights</h2>
           <p className="text-muted-foreground">Stay informed with the latest updates, medical advice, and <br />healthcare developments.</p>
         </div>
 
@@ -23,20 +23,21 @@ export function Insights() {
               <div className="rounded-3xl overflow-hidden mb-6 aspect-video relative shadow-sm border border-border">
                 <img src={blog.mainImg} alt={blog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div
-                  className={`absolute top-4 left-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 flex items-center gap-2 text-xs font-semibold shadow-sm 
+                  className={`absolute top-4 left-4 bg-white/90 backdrop-blur rounded-full px-3 py-1 flex items-center gap-2 text-xs shadow-sm 
                             ${isDarkBackground ? "text-gray-900" : "text-gray-700"}`}
+                  style={{ fontWeight: 400 }}
                 >
                   <div className="w-2 h-2 rounded-full bg-black"></div>
                   Article
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors leading-snug">{blog.title}</h3>
+              <h3 className="text-xl mb-4 group-hover:text-primary transition-colors leading-snug" style={{ fontWeight: 400 }}>{blog.title}</h3>
 
               <div className="flex items-center gap-3 mt-auto">
                 <img src={blog.docImg} alt={blog.author} className="w-10 h-10 rounded-full object-cover border border-border" />
                 <div>
-                  <p className="text-sm font-bold text-foreground">{blog.author}</p>
+                  <p className="text-sm text-foreground" style={{ fontWeight: 400 }}>{blog.author}</p>
                   <p className="text-xs text-muted-foreground">{blog.spec}</p>
                 </div>
               </div>
@@ -46,7 +47,7 @@ export function Insights() {
 
         <div className="flex justify-center mt-12">
           <Link href="/blogs">
-            <button className="bg-primary/10 text-primary hover:bg-primary/20 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">
+            <button className="bg-primary/10 text-primary hover:bg-primary/20 px-6 py-2 rounded-full text-sm transition-colors uppercase tracking-wider" style={{ fontWeight: 400 }}>
               View All
             </button>
           </Link>
