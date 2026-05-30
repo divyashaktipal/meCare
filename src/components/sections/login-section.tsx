@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import axiosInstance from "@/api/axiosInstance";
+import api from "@/lib/axios";
 
 export function LoginSection() {
    const [res, setRes] = useState("");
@@ -24,7 +24,7 @@ export function LoginSection() {
       setLoading(true);
 
       try {
-         const response = await axiosInstance.post("/auth/login", formData);
+         const response = await api.post("/auth/login", formData);
          const data = response.data;
          localStorage.setItem("token", data.token);
          setRes("Login successful");

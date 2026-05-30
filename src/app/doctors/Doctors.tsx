@@ -1,31 +1,14 @@
 "use client";
 
-import React from 'react'
-import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { DoctorsHero } from "@/components/sections/doctors-hero";
 import { CTABanner } from "@/components/sections/cta-banner";
-import { Doctor } from '@/lib/types/DoctorTypes';
-import axiosInstance from "@/api/axiosInstance";
+import { useDoctors } from "@/hooks/use-doctors";
 
 function Doctors() {
-    const [doctors, setDoctors] = useState<Doctor[]>([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchDoctors = async () => {
-            try {
-                const response = await axiosInstance.get("/doctors");
-                setDoctors(response.data);
-            } catch (error) {
-                console.error("Error fetching doctors:", error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchDoctors();
-    }, []);
+    const { data, isLoading, error } = useDoctors();
+    const doctors = data?.data || [];
 
     return (
         <>
@@ -37,7 +20,7 @@ function Doctors() {
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#03112E] text-center mb-12 pb-6 pt-12 flex flex-wrap justify-center items-center gap-y-4 leading-tight md:max-w-4xl mx-auto ">Meet Our Specialists</h2>
 
                     <div className="max-w-6xl mx-auto">
-                        {loading ? (
+                        {isLoading ? (
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                 {Array.from({ length: 8 }).map((_, i) => (
                                     <div key={i} className="relative rounded-[2rem] overflow-hidden aspect-[3/4] border border-border/50 bg-white">
@@ -52,7 +35,7 @@ function Doctors() {
                         ) : (
                             <div className="max-h-[850px] overflow-y-auto pr-2 custom-scrollbar">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                                    {doctors.map((doc) => (
+                                    {doctors.map((doc: any) => (
                                         <div key={doc._id} className="relative rounded-[2rem] overflow-hidden aspect-[3/4] group border border-border/50">
                                             <div className="absolute inset-0 bg-[#E8EAEF] -z-10"></div>
                                             <img src={doc.image || "./myPhoto.jpg"} alt={doc.name} className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" />
@@ -74,7 +57,7 @@ function Doctors() {
                             </div>
                         )}
 
-                        {!loading && doctors.length === 0 && (
+                        {!isLoading && doctors.length === 0 && (
                             <div className="text-center py-12">
                                 <p className="text-muted-foreground">No doctors available at the moment.</p>
                             </div>

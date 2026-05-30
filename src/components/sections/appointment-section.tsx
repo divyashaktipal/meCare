@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import axiosInstance from "@/api/axiosInstance";
+import api from "@/lib/axios";
 
 export function AppointmentSection() {
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ export function AppointmentSection() {
     setRes("");
 
     try {
-      const response = await axiosInstance.post("/appointments", formData);
+      const response = await api.post("/appointments", formData);
       setRes("Appointment successfully booked!");
       setFormData({
         department: "Pediatric Clinic",

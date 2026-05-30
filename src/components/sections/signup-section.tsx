@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import axiosInstance from "@/api/axiosInstance";
+import api from "@/lib/axios";
 import { useRouter } from "next/navigation";
 
 export function SignupSection() {
@@ -33,7 +33,7 @@ export function SignupSection() {
       }
 
       try {
-         const response = await axiosInstance.post("/auth/signup", formData);
+         const response = await api.post("/auth/signup", formData);
          const data = response.data;
          if (data.token) {
             localStorage.setItem("token", data.token);

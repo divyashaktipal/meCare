@@ -1,15 +1,15 @@
-import axios from "axios";
+import axios from 'axios'
 
-const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000/api",
+const api = axios.create({
+    baseURL: process.env.BACKEND_API_ENDPOINT || 'http://localhost:5000/api',
     headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
     },
-    withCredentials: true,
-});
+})
 
 // Request Interceptor
-axiosInstance.interceptors.request.use(
+api.interceptors.request.use(
     (config) => {
         const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
         if (token) {
@@ -23,7 +23,7 @@ axiosInstance.interceptors.request.use(
 );
 
 // Response Interceptor
-axiosInstance.interceptors.response.use(
+api.interceptors.response.use(
     (response) => response,
     (error) => {
         if (error.response?.status === 401) {
@@ -33,4 +33,4 @@ axiosInstance.interceptors.response.use(
     }
 );
 
-export default axiosInstance;
+export default api;
