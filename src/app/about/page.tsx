@@ -1,10 +1,10 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { AboutHero } from "@/components/sections/about-hero";
-import { AboutStats } from "@/components/sections/about-stats";
-import { AboutPassionate } from "@/components/sections/about-passionate";
-import { AboutWellBeing } from "@/components/sections/about-well-being";
-import { AboutBenefits } from "@/components/sections/about-benefits";
+import { AboutHero } from "@/components/sections/aboutUs/about-hero";
+import { AboutStats } from "@/components/sections/aboutUs/about-stats";
+import { AboutPassionate } from "@/components/sections/aboutUs/about-passionate";
+import { AboutWellBeing } from "@/components/sections/aboutUs/about-well-being";
+import { AboutBenefits } from "@/components/sections/aboutUs/about-benefits";
 import { Specialists } from "@/components/sections/specialists";
 import { CTABanner } from "@/components/sections/cta-banner";
 
