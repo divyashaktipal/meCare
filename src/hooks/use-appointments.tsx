@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchAppointments } from "@/api/appointment.api";
+import { fetchAppointments } from "@/lib/api/appointment.api";
 
 const appointmentKeys = {
     all: ["appointments"] as const,
