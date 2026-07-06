@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { AppointmentSection } from "@/components/sections/appointment-section";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { AppointmentSection } from "@/components/sections/appointment/appointment-section";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 
 export const metadata = {
   title: "Get Appointment | meCare Medical Management",

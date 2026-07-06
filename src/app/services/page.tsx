@@ -1,9 +1,9 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { ServiceHero } from "@/components/sections/service-hero";
-import { ServiceList } from "@/components/sections/service-list";
-import { ServiceFaq } from "@/components/sections/service-faq";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { ServiceHero } from "@/components/sections/services/service-hero";
+import { ServiceList } from "@/components/sections/services/service-list";
+import { ServiceFaq } from "@/components/sections/services/service-faq";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 
 export const metadata = {
   title: "Services | meCare Medical Management",

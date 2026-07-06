@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { Pricing } from "@/components/sections/pricing";
-import { ServiceFaq } from "@/components/sections/service-faq";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { Pricing } from "@/components/sections/pricing/pricing";
+import { ServiceFaq } from "@/components/sections/services/service-faq";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 
 export const metadata = {
   title: "Pricing | meCare Medical Management",

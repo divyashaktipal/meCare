@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { PrivacySection } from "@/components/sections/privacy-section";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 
 export const metadata = {
   title: "Privacy Policy | meCare Medical Management",

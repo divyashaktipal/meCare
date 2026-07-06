@@ -6,7 +6,7 @@ import { AboutPassionate } from "@/components/sections/aboutUs/about-passionate"
 import { AboutWellBeing } from "@/components/sections/aboutUs/about-well-being";
 import { AboutBenefits } from "@/components/sections/aboutUs/about-benefits";
 import { Specialists } from "@/components/sections/specialists";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 
 export default function AboutPage() {
   return (

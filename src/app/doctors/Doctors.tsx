@@ -2,9 +2,11 @@
 
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { DoctorsHero } from "@/components/sections/doctors-hero";
-import { CTABanner } from "@/components/sections/cta-banner";
+import { DoctorsHero } from "@/components/sections/doctors/doctors-hero";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
 import { useDoctors } from "@/hooks/use-doctors";
+import { Doctor } from "@/types/doctor";
+
 
 function Doctors() {
     const { data, isLoading, error } = useDoctors();
@@ -35,7 +37,7 @@ function Doctors() {
                         ) : (
                             <div className="max-h-[850px] overflow-y-auto pr-2 custom-scrollbar">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                                    {doctors.map((doc: any) => (
+                                    {doctors.map((doc: Doctor) => (
                                         <div key={doc._id} className="relative rounded-[2rem] overflow-hidden aspect-[3/4] group border border-border/50">
                                             <div className="absolute inset-0 bg-[#E8EAEF] -z-10"></div>
                                             <img src={doc.image || "./myPhoto.jpg"} alt={doc.name} className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-105" />

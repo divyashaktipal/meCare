@@ -1,4 +1,4 @@
-import { Dashboard } from "@/components/sections/dashboard";
+import { Dashboard } from "@/components/sections/dashboard/dashboard";
 
 export const metadata = {
   title: "Dashboard - MeCare",
