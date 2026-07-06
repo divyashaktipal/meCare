@@ -1,4 +1,4 @@
-import { MedicineIcon, NeurologyIcon, OrthopedicIcon, UrologyIcon, DermatologyIcon, NutritionIcon, DentalIcon, CardiologyIcon, OncologyIcon, PsychiatryIcon, RheumatologyIcon } from "@/custom/svgIcons/specialties";
+import { MedicineIcon, NeurologyIcon, OrthopedicIcon, UrologyIcon, DermatologyIcon, NutritionIcon, DentalIcon, CardiologyIcon, OncologyIcon, PsychiatryIcon, RheumatologyIcon } from "@/assests/svgIcons/specialties";
 
 export function Specialties() {
   const specialties = [

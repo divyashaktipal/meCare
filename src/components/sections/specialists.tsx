@@ -1,14 +1,7 @@
 "use client";
 
 import { ReactNode, useRef, useState, useEffect } from "react";
-
-interface Doctor {
-  _id: string;
-  name: string;
-  specialization: string;
-  bgColor: string;
-  image: string;
-}
+import { Doctor } from "@/types/doctor";
 
 export function Specialists({ customTitle, hideDescription }: { customTitle?: ReactNode, hideDescription?: boolean }) {
   const scrollRef = useRef<HTMLDivElement>(null);

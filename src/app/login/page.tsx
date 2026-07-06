@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { LoginSection } from "@/components/sections/login-section";
+import { LoginSection } from "@/components/sections/login/login-section";
 
 export const metadata = {
   title: "Sign In | meCare Medical Management",

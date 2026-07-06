@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { CTABanner } from "@/components/sections/cta-banner";
-import { BlogDetails } from "@/components/sections/blog-details";
+import { CTABanner } from "@/components/sections/finalCTA/cta-banner";
+import { BlogDetails } from "@/components/sections/blog/blog-details";
 
 export const metadata = {
   title: "Blog Post | meCare Medical Management",
